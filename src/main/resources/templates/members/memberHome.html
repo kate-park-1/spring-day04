@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>KOSTA 쇼핑몰</title>
 </head>
 <body>
-
+    <div>
+        <h2>KOSTA 쇼핑몰</h2>
+        <button type="button" th:onclick="|location.href='@{/members/addMember}'|" th:text="'회원가입'"></button>
+    </div>
 </body>
 </html>

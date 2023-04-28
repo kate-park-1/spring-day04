@@ -1,10 +1,25 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>회원 가입</title>
 </head>
 <body>
-   members디렉토리 아래의 new-form.html
+    <div>
+        <h2>회원가입</h2>
+        <form method="post" th:action="@{/members/saveMember}">
+            <div>
+                <label>회원명</label>
+                <input type="text" th:name="username">
+            </div>
+            <div>
+                <label>나이</label>
+                <input type="text" th:name="age">
+            </div>
+            <input type="submit" value="회원가입">
+        </form>
+        <button type="button" th:onclick="|location.href='@{/members/home}'|">홈으로</button>
+    </div>
 </body>
 </html>
