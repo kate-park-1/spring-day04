@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원상세정보조회</title>
+</head>
+<body>
+<div>
+    <h2>회원상세정보조회</h2>
+    <div>
+        <label>아이디</label>
+        <input type="text" th:value="${member.id}" readonly>
+    </div>
+    <div>
+        <label>회원명</label>
+        <input type="text" th:value="${member.username}" readonly>
+    </div>
+    <div>
+        <label>나이</label>
+        <input type="text" th:value="${member.age}" readonly>
+    </div>
+    <button type="button" th:onclick="|location.href='@{/home}'|">홈으로</button>
+    <button type="button" th:onclick="|location.href='@{/members/memberList}'|">이전으로</button>
+</div>
+</body>
+</html>

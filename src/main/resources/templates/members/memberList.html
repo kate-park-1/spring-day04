@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kosta 쇼핑몰 회원 목록 조회</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<h1>회원 목록 조회</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>회원명</th>
+    </tr>
+    <tr th:each="member : ${members}">
+        <td>
+            <a th:href="@{/members/memberInfo?id={id}(id=${member.id})}" th:text="${member.id}">member.id</a>
+        </td>
+        <td>
+            <a th:href="@{/members/memberInfo?id={id}(id=${member.id})}" th:text="${member.username}">member.username</a>
+        </td>
+    </tr>
+</table>
+<p>
+    <a href="../home.html" th:href="@{/home}">Return to home</a>
+</p>
+
+</body>
+
+</html>
